@@ -1,0 +1,6 @@
+flask==3.0.2
+torch==2.2.2
+torchvision==0.17.2
+ultralytics==8.1.37
+pillow==10.3.0
+numpy==1.26.4
