@@ -32,6 +32,72 @@ The models were trained on the **TBX11K dataset**, a large-scale tuberculosis X-
 
 ---
 
+## 🏗️ System Architecture
+
+```mermaid
+graph TB
+    subgraph "User Interface Layer"
+        A[Streamlit Web Interface] --> B[Image Upload Component]
+        B --> C[Results Display]
+    end
+    
+    subgraph "Processing Pipeline"
+        D[Image Preprocessing] --> E[DenseNet Classification]
+        E --> F{TB Detected?}
+        F -->|Yes| G[YOLO Object Detection]
+        F -->|No| H[Display Classification Only]
+        G --> I[Bounding Box Annotation]
+    end
+    
+    subgraph "AI Models"
+        J[DenseNet Model<br/>best_model_unfrozen.h5]
+        K[YOLOv8 Model<br/>best.pt]
+    end
+    
+    subgraph "Output"
+        L[Classification Results<br/>- Class: healthy/sick/tb<br/>- Confidence Score<br/>- All Probabilities]
+        M[Detection Results<br/>- TB Region Localization<br/>- Annotated X-ray Image<br/>- Detection Confidence]
+    end
+    
+    B --> D
+    E -.loads.-> J
+    G -.loads.-> K
+    H --> L
+    I --> M
+    L --> C
+    M --> C
+    
+    style A fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    style J fill:#50C878,stroke:#2E7D4E,stroke-width:2px,color:#fff
+    style K fill:#50C878,stroke:#2E7D4E,stroke-width:2px,color:#fff
+    style F fill:#FFB84D,stroke:#CC8A3D,stroke-width:2px,color:#000
+    style L fill:#9B59B6,stroke:#6C3A7C,stroke-width:2px,color:#fff
+    style M fill:#9B59B6,stroke:#6C3A7C,stroke-width:2px,color:#fff
+```
+
+### Architecture Components:
+
+1. **User Interface Layer**
+   - Built with Streamlit for interactive web experience
+   - Drag-and-drop image upload functionality
+   - Real-time results visualization
+
+2. **Processing Pipeline**
+   - Image preprocessing (resizing, normalization)
+   - Sequential processing: Classification → Detection
+   - Conditional execution based on TB detection
+
+3. **AI Models**
+   - **DenseNet**: Deep learning classifier for 3-class categorization
+   - **YOLOv8**: Real-time object detector for TB region localization
+
+4. **Output Layer**
+   - Classification probabilities for all classes
+   - Annotated images with bounding boxes
+   - Downloadable results
+
+---
+
 ## 📁 Project Structure
 
 ```
