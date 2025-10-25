@@ -176,19 +176,27 @@ streamlit run app.py
 ## 📷 Application Screenshots
 
 ### 1. Home Screen - Upload Interface
-![Home Screen](screenshots/home_screen.png)
+
+![Home Screen](images/Screenshot%202025-10-25%20154235.png)
+
 *Upload your chest X-ray image using drag-and-drop or browse files*
 
 ### 2. Image Upload & Processing
-![Image Upload](screenshots/image_upload.png)
+
+![Image Upload](images/Screenshot%202025-10-25%20154458.png)
+
 *The application processes the uploaded X-ray image*
 
 ### 3. Classification Results
-![Classification Results](screenshots/classification_results.png)
+
+![Classification Results](images/Screenshot%202025-10-25%20154524.png)
+
 *View detailed classification results with confidence scores for all classes*
 
 ### 4. TB Region Detection
-![TB Detection](screenshots/tb_detection.png)
+
+![TB Detection](images/Screenshot%202025-10-25%20154613.png)
+
 *YOLO model highlights and annotates TB-affected regions in the X-ray*
 
 ---
