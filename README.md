@@ -21,6 +21,15 @@ An AI-powered web application for detecting **Tuberculosis (TB)** from **chest X
 | DenseNet  | Classification    | healthy, sick, tb |
 | YOLOv8    | Object Detection  | ActiveTuberculosis, ObsoletePulmonaryTuberculosis |
 
+### 📊 Dataset
+
+The models were trained on the **TBX11K dataset**, a large-scale tuberculosis X-ray dataset containing:
+- **11,200 chest X-ray images**
+- Multiple TB manifestations including active and obsolete pulmonary tuberculosis
+- Expert annotations for both classification and localization tasks
+
+**Dataset Reference:** [TBX11K: A Large-scale Tuberculosis X-ray Dataset](https://mmcheng.net/tb/)
+
 ---
 
 ## 📁 Project Structure
@@ -42,8 +51,8 @@ TB-Detection-System/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/tb-detection-system.git
-cd tb-detection-system
+git clone https://github.com/rohitaimlpro/Tuberculosis-detection.git
+cd Tuberculosis-detection
 ```
 
 ### 2️⃣ Create and Activate Virtual Environment (Recommended)
@@ -164,9 +173,9 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 📬 Contact
 
-- **Author:** Your Name
-- **GitHub:** [https://github.com/yourusername](https://github.com/yourusername)
-- **Email:** your.email@example.com
+- **Author:** Rohit Sharma
+- **GitHub:** [https://github.com/rohitaimlpro](https://github.com/rohitaimlpro)
+- **Email:** rs5294645@gmail.com
 
 ---
 
