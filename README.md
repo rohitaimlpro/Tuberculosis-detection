@@ -42,11 +42,11 @@ TB-Detection-System/
 ├── best (6).pt                 # YOLO model (Detection)
 ├── requirements.txt            # Project dependencies
 ├── README.md                   # Project documentation
-└── screenshots/                # Application screenshots
-    ├── home_screen.png
-    ├── image_upload.png
-    ├── classification_results.png
-    └── tb_detection.png
+└── images/                     # Application screenshots
+    ├── Screenshot 2025-10-25 154235.png
+    ├── Screenshot 2025-10-25 154458.png
+    ├── Screenshot 2025-10-25 154524.png
+    └── Screenshot 2025-10-25 154613.png
 ```
 
 ---
@@ -86,7 +86,7 @@ Edit these lines in `app.py` to your actual model paths:
 DENSENET_MODEL_PATH = 'path/to/best_model_unfrozen.h5'
 YOLO_MODEL_PATH = 'path/to/best (6).pt'
 ```
-screenshots/home_screen.png
+
 ### 5️⃣ Run the App
 
 ```bash
@@ -110,19 +110,19 @@ streamlit run app.py
 ## 📷 Application Screenshots
 
 ### 1. Home Screen - Upload Interface
-![Home Screen](images\Screenshot 2025-10-25 154235.png)
+![Home Screen](screenshots/home_screen.png)
 *Upload your chest X-ray image using drag-and-drop or browse files*
 
 ### 2. Image Upload & Processing
-![Image Upload](images\Screenshot 2025-10-25 154458.png)
+![Image Upload](screenshots/image_upload.png)
 *The application processes the uploaded X-ray image*
 
 ### 3. Classification Results
-![Classification Results](images\Screenshot 2025-10-25 154524.png)
+![Classification Results](screenshots/classification_results.png)
 *View detailed classification results with confidence scores for all classes*
 
 ### 4. TB Region Detection
-![TB Detection](images\Screenshot 2025-10-25 154613.png)
+![TB Detection](screenshots/tb_detection.png)
 *YOLO model highlights and annotates TB-affected regions in the X-ray*
 
 ---
